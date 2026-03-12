@@ -1,0 +1,20 @@
+//Program to print Sum of Arithmatic Progression
+
+#include<bits/stdc++.h>
+using namespace std;
+
+float apsum(float a, float n, float d)
+{
+    float sum=(n/2)*((2*a)+((n-1)*d));
+    return sum;
+}
+
+int main()
+{
+    float a,n,d;
+    cout<<"Enter details for a,n,d:";
+    cin>>a>>n>>d;
+    float sum=apsum(a,n,d);
+    cout<<"Sum of AP= "<<sum;
+    return 0;
+}
