@@ -1,0 +1,13 @@
+//Program to print Greatest of given 2 numbers
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    int large=(a>b)?a:b;
+    cout<<large;
+    return 0;
+}
