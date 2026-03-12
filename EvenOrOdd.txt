@@ -1,0 +1,25 @@
+//Program to print whether a number is Even or Odd
+//Here, we are using bitwise logic
+//we will take AND for (n,1) -- If res is 0, number n is even. Else, it is odd
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int isevenodd(int n)
+{
+    return n&1;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+    int res=isevenodd(n);
+    if (res==0)
+       cout<<n<<" is Even";
+    else
+       cout<<n<<" is Odd";
+    return 0;
+}
