@@ -1,0 +1,20 @@
+//Program to print Sum of Geometric Progression Series
+
+#include<bits/stdc++.h>
+using namespace std;
+
+float apsum(float a, float n, float r)
+{
+    float sum=a* (pow(r,n)-1)/(r-1);
+    return sum;
+}
+
+int main()
+{
+    float a,n,r;
+    cout<<"Enter details for a,n,r:";
+    cin>>a>>n>>r;
+    float sum=apsum(a,n,r);
+    cout<<"Sum of GP series= "<<sum;
+    return 0;
+}
