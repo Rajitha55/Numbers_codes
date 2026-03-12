@@ -1,0 +1,29 @@
+//Program to check Leap year or not
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool leap(int yr)
+{
+    if(yr%100==0)
+    {
+        if(yr%400==0)
+          return true;
+    }
+    else if(yr%4==0)
+        return true;
+    return false;
+}
+
+int main()
+{
+    int yr;
+    cout<<"enter a Year: ";
+    cin>>yr;
+    bool res=leap(yr);
+    if(res==true)
+       cout<<yr<<" is a Leap year";
+    else
+       cout<<yr<<" is not a Leap year";
+    return 0;
+}
