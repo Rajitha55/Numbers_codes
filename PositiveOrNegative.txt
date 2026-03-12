@@ -1,0 +1,24 @@
+//Program to check whether a number is positive or negative
+//Here, we using bit manipulation llogis
+//We right shift(>>) a number 31 times. If res is 0, it is Positive, else negative number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int isevenodd(int n)
+{
+    return n>>31;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+    int res=isevenodd(n);
+    if(res==0)
+      cout<<n<<" is Positive";
+    else
+      cout<<n<<" is Negative";
+    return 0;
+}
