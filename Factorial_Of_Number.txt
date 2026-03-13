@@ -1,0 +1,22 @@
+//Program to print Factorial of a given number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int factorial(int n)
+{
+    int res=1;
+    for(int i=1;i<=n;i++)
+       res*=i;
+    return res;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number:";
+    cin>>n;
+    int res=factorial(n);
+    cout<<"Factorial of "<<n<<"= "<<res;
+    return 0;
+}
