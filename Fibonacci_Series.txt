@@ -1,0 +1,29 @@
+//Program to print Fibonacci series upto 'n'th term
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter how many numbers you want to print in Fibonacci Series:";
+    cin>>n;
+    
+    int last=1,seclast=0;
+    cout<<"Fibonacci Series as follows:"<<endl;
+    if(n==0)
+       cout<<"0";
+    else
+    {
+        cout<<seclast<<", "<<last<<", ";
+        for(int i=2;i<n;i++)
+        {
+            int cur=seclast+last;
+            cout<<cur<<", ";
+            seclast=last;
+            last=cur;
+        }
+    }
+      
+    return 0;
+}
