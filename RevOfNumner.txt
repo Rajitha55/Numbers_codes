@@ -1,0 +1,27 @@
+//Program to print Reverse of a number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int revnum(int n)
+{
+    int rev=0;
+    while(n>0)
+    {
+        rev=(rev*10)+(n%10);
+        n/=10;
+    }
+    return rev;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter any number:";
+    cin>>n;
+    
+    int rev= revnum(n);
+    cout<<"Reverese of "<<n<<" is "<<rev;
+    
+    return 0;
+}
