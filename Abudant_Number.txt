@@ -1,0 +1,38 @@
+//Program to check whether a number is Abudant number or not
+//Abudant number is a number whose sum of proper divisors > number itself
+//Proper divisors means it didn't include n
+//sum(proper divisors) > number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool abudant(int n)
+{
+    int sum=0;
+    for(int i=1; i*i <= n; i++)
+    {
+        if(n%i == 0)
+        {
+            if(i==n/i || n/i==n)
+               sum+=i;
+            else
+               sum= sum+i+(n/i);
+        }
+    }
+    if(sum>n)
+       return true;
+    return false;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter any number:";
+    cin>>n;
+    bool res=abudant(n);
+    if(res==true)
+       cout<<n<<" is an Abudant number";
+    else
+       cout<<n<<" is not an Abudant number";
+    return 0;
+}
