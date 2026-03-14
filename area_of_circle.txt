@@ -1,0 +1,19 @@
+//Program to Print Radius of a Circle
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void radius(int r)
+{
+    double area=3.14 * (r*r);
+    cout<<"Area of Circle= "<<area;
+}
+
+int main()
+{
+    int r;
+    cout<<"Enter Radius value:"<<endl;
+    cin>>r;
+    radius(r);
+    return 0;
+}
