@@ -1,0 +1,32 @@
+//Program to find GCD of 2 numbers
+//Here, we are using Euclidian's algorithm --> GCD of 2 numbers remains same even if we substract the larger number with the smaller number
+//To find the GCD of n1 and n2 where n1 > n2:
+//1. Repeatedly subtract the smaller number from the larger number until one of them becomes 0.
+//2. Once one number becomes 0, the other is the GCD of the original numbers.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int gcd(int m,int n)
+{
+    while(m>0 && n>0)
+    {
+        if(m>n)
+           m%=n;
+        else
+           n%=m;
+    }
+    if(m==0)
+       return n;
+    return m;   
+}
+
+int main()
+{
+    int m,n;
+    cout<<"Enter any 2 numbers:";
+    cin>>m>>n;
+    int res=gcd(m,n);
+    cout<<"GCD of "<<m<<","<<n<<"= "<<res;
+    return 0;
+}
