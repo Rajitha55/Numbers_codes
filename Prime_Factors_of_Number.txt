@@ -1,0 +1,40 @@
+//Progarm to print unique prime factors of a given number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void primefact(int n)
+{
+    vector<int>fact;
+    if(n%2==0)
+    {
+        fact.push_back(2);
+        while(n%2==0)
+            n/=2;
+    }
+    
+    for(int i=3;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            fact.push_back(i);
+            while(n%i==0)
+                n/=i;
+        }
+    }
+    
+    if(n>1)
+       fact.push_back(n);
+       
+    for(int i:fact)
+       cout<<i<<" ";
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number:";
+    cin>>n;
+    primefact(n);
+    return 0;
+}
