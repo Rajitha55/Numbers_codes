@@ -1,0 +1,24 @@
+//Program to print sum of digits of a number unti it becomes sinle digit 
+//Example: 472 --> 4+7+2=13 --> 1+3=4
+//Here, we will use a formula of digital number
+//digital number= 1+ (n-1)%9 --> for 472, it returns 4 as output
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int sum(int n)
+{
+    if(n==0)
+       return 0;
+    return (1+(n-1)%9);
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number:";
+    cin>>n;
+    int res=sum(n);
+    cout<<"Sum of digits of given number: "<<res;
+    return 0;
+}
