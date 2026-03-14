@@ -1,0 +1,49 @@
+//Program to check whether a number can be written as sum of 2 primes
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool is_prime(int num)
+{
+    if(num<2)
+      return false;
+      
+    for(int i=2;i*i<=num; i++)
+    {
+        if(num%i ==0)
+           return false;
+    }
+    return true;
+}
+
+bool is_sum_of_prime(int n)
+{
+    if(n<4)
+       return false;
+    if(n%2==1)
+       return is_prime(n-2);
+       
+    for(int i=2;i<=n/2;i++)
+    {
+        if(is_prime(i) && is_prime(n-i))
+           return true;
+    }
+    return false;
+}
+
+
+int main()
+{
+    int n;
+    cout<<"Enter a number:"<<endl;
+    cin>>n;
+    if(is_sum_of_prime(n))
+       cout<<"Yes";
+    else
+       cout<<"No";
+    return 0;
+}
+
+
+
+
