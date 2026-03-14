@@ -1,0 +1,21 @@
+//Program to print sum of number in a range from l to r
+//sum of n numbers=n(n+1)/2
+//so, sum of numbers from l to r= (sum of number from 1 to r) - (sum of numebrs from 1 to (l-1))
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int sum(int l, int r)
+{
+    return (r*(r+1))/2 - ((l-1)*l)/2;
+}
+
+int main()
+{
+    int l,r;
+    cout<<"Enter range:";
+    cin>>l>>r;
+    int res=sum(l,r);
+    cout<<"Sum of numbers from "<<l<<" to "<<r<<" is "<<res;
+    return 0;
+}
