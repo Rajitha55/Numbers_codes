@@ -1,0 +1,31 @@
+//Program to check whether a number is Automorphic or not
+//Automorphic number is a number whose Square ends with number itself
+
+#include  <bits/stdc++.h>
+using namespace std;
+
+bool automorphic(int n)
+{
+    int sq=n*n;
+    while(n>0)
+    {
+        if(n%10 != sq%10)
+           return false;
+        n/=10;
+        sq/=10;
+    }
+    return true;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number:";
+    cin>>n;
+    bool res=automorphic(n);
+    if(res==true)
+       cout<<n<<" is an Automorphic number";
+    else
+       cout<<n<<" is not an Automorphic number";
+    return 0;
+}
