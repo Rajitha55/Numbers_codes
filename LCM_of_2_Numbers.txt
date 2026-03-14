@@ -1,0 +1,31 @@
+//Program to print LCM of 2 numbers
+//Here,  we are using Euclidean's alogirthm to find GCD of 2 numbers
+//LCM(m,n)=(m*n)/GCD(m,n)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int gcd(int m, int n)
+{
+    while(m>0 && n>0)
+    {
+        if(m>n)
+           m%=n;
+        else
+           n%=m;
+    }
+    if(m==0)
+       return n;
+    return m;
+}
+
+int main()
+{
+    int m,n;
+    cout<<"Enter 2 numbers:";
+    cin>>m>>n;
+    int g=gcd(m,n);
+    int lcm=(m*n)/g;
+    cout<<"LCM of "<<m<<" and "<<n<<" is "<<lcm;
+    return 0;
+}
