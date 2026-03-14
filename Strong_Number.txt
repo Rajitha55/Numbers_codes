@@ -1,0 +1,38 @@
+//Program to print whether a number is strong number or not
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int factorial(int dig)
+{
+    int fact=1;
+    for(int i=2;i<=dig;i++)
+        fact*=i;
+    return  fact;
+}
+
+
+int is_strong(int n)
+{
+    int sum=0;
+    while(n>0)
+    {
+        int dig=n%10;
+        sum=sum+factorial(dig);
+        n=n/10;
+    }
+    return sum;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number:";
+    cin>>n;
+    int res=is_strong(n);
+    if(res==n)
+       cout<<n<<" is a Strong number";
+    else
+       cout<<n<<" is not a  Strong number";
+    return 0;
+}
